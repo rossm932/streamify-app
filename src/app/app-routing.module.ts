@@ -9,15 +9,15 @@ import { MoviesRatedComponent } from './pages/movies-rated/movies-rated.componen
 import { LogoutComponent } from './pages/logout/logout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
-  { path: 'browse', component: BrowseComponent },
-  { path: 'movie/:id', component: MovieDetailsComponent },
-  { path: 'movies-rated', component: MoviesRatedComponent },
-  { path: 'logout', component: LogoutComponent }
+  { path: 'browse', component: BrowseComponent }, // Movies browse page
+  { path: 'movies-rated', component: MoviesRatedComponent }, // Rated movies page
+  { path: 'logout', component: LogoutComponent }, // Logout page
+  { path: 'movie-details/:id', component: MovieDetailsComponent }, // Movie details with dynamic ID
+  { path: '**', redirectTo: '/home' }, // Redirect any unknown paths to Home
 ];
 
 @NgModule({

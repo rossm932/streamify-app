@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -13,12 +14,17 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { MoviesRatedComponent } from './pages/movies-rated/movies-rated.component';
+import { CommonModule } from '@angular/common'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 // Angular Material Modules
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AuthService } from './auth.service';
 
 const routes: Routes = [];
 
@@ -28,22 +34,30 @@ const routes: Routes = [];
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    BrowseComponent,
-    NavbarComponent,
     LogoutComponent,
     MoviesRatedComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    CommonModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'browse', component: BrowseComponent },
+    ]),
     FormsModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    NavbarComponent
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   exports: [RouterModule]
 })
