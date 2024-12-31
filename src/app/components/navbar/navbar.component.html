@@ -1,0 +1,19 @@
+<div class="navbar" [class.expanded]="isExpanded">
+    <div class="toggle-btn" (click)="toggleNavbar()">
+      <span *ngIf="!isExpanded">&#9776;</span> <!-- Hamburger Icon -->
+      <span *ngIf="isExpanded">&#10006;</span> <!-- Close Icon -->
+    </div>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/browse" routerLinkActive="active">Browse</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/movies-rated" routerLinkActive="active">Movies Rated</a></li>
+      <li *ngIf="isLoggedIn"><a (click)="onLogout()">Logout</a></li>
+    </ul>
+  </div>
+  
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  

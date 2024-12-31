@@ -1,0 +1,92 @@
+/* Main navbar container */
+.navbar {
+    position: fixed; /* Stick it to the left-hand side */
+    top: 0;
+    left: 0;
+    width: 250px; /* Set the width of the navbar */
+    height: 100%; /* Full height */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    justify-content: flex-start;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  /* Navbar links container */
+  .navbar ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width */
+  }
+  
+  /* Navbar list items */
+  .navbar ul li {
+    margin: 10px 0; /* Space between items */
+  }
+  
+  /* Navbar links */
+  .navbar ul li a {
+    display: block; /* Full clickable area */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect for links */
+  .navbar ul li a:hover {
+    background-color: #575757; /* Gray background on hover */
+    color: white;
+  }
+  
+  /* Active link styling */
+  .navbar ul li a.active {
+    background-color: #1e88e5; /* Highlight active link */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Content area adjustment */
+  .content {
+    margin-left: 250px; /* Leave space for the navbar */
+    padding: 20px;
+  }
+  
+  /* Toggle button for mobile */
+  .toggle-btn {
+    display: none; /* Hide toggle button by default */
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 200px; /* Narrower navbar on smaller screens */
+    }
+  
+    .toggle-btn {
+      display: block; /* Show toggle button on mobile */
+      color: white;
+      font-size: 1.5rem;
+      margin: 10px;
+      cursor: pointer;
+    }
+  
+    .navbar ul {
+      display: none; /* Hide navbar links by default */
+    }
+  
+    .navbar.expanded ul {
+      display: block; /* Show navbar links when expanded */
+    }
+  
+    .content {
+      margin-left: 200px; /* Adjust content for smaller navbar */
+    }
+  }
+  
