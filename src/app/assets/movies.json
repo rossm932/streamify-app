@@ -1,22 +1,202 @@
 [
-    { "id": 1, "title": "Inception", "director": "Christopher Nolan", "genre": "Sci-Fi", "rating": 8.8, "poster": "path/to/poster.jpg" },
-    { "id": 2, "title": "The Dark Knight", "director": "Christopher Nolan", "genre": "Action", "rating": 9.0, "poster": "path/to/poster.jpg" },
-    { "id": 3, "title": "Interstellar", "director": "Christopher Nolan", "genre": "Sci-Fi", "rating": 8.6, "poster": "path/to/poster.jpg" },
-    { "id": 4, "title": "The Matrix", "director": "Lana Wachowski, Lilly Wachowski", "genre": "Sci-Fi", "rating": 8.7, "poster": "path/to/poster.jpg" },
-    { "id": 5, "title": "The Shawshank Redemption", "director": "Frank Darabont", "genre": "Drama", "rating": 9.3, "poster": "path/to/poster.jpg" },
-    { "id": 6, "title": "Pulp Fiction", "director": "Quentin Tarantino", "genre": "Crime", "rating": 8.9, "poster": "path/to/poster.jpg" },
-    { "id": 7, "title": "Fight Club", "director": "David Fincher", "genre": "Drama", "rating": 8.8, "poster": "path/to/poster.jpg" },
-    { "id": 8, "title": "Forrest Gump", "director": "Robert Zemeckis", "genre": "Drama", "rating": 8.8, "poster": "path/to/poster.jpg" },
-    { "id": 9, "title": "Gladiator", "director": "Ridley Scott", "genre": "Action", "rating": 8.5, "poster": "path/to/poster.jpg" },
-    { "id": 10, "title": "The Godfather", "director": "Francis Ford Coppola", "genre": "Crime", "rating": 9.2, "poster": "path/to/poster.jpg" },
-    { "id": 11, "title": "The Godfather: Part II", "director": "Francis Ford Coppola", "genre": "Crime", "rating": 9.0, "poster": "path/to/poster.jpg" },
-    { "id": 12, "title": "The Lord of the Rings: The Return of the King", "director": "Peter Jackson", "genre": "Fantasy", "rating": 8.9, "poster": "path/to/poster.jpg" },
-    { "id": 13, "title": "The Lord of the Rings: The Fellowship of the Ring", "director": "Peter Jackson", "genre": "Fantasy", "rating": 8.8, "poster": "path/to/poster.jpg" },
-    { "id": 14, "title": "Star Wars: Episode IV - A New Hope", "director": "George Lucas", "genre": "Sci-Fi", "rating": 8.6, "poster": "path/to/poster.jpg" },
-    { "id": 15, "title": "The Silence of the Lambs", "director": "Jonathan Demme", "genre": "Thriller", "rating": 8.6, "poster": "path/to/poster.jpg" },
-    { "id": 16, "title": "Schindler's List", "director": "Steven Spielberg", "genre": "Drama", "rating": 9.0, "poster": "path/to/poster.jpg" },
-    { "id": 17, "title": "The Green Mile", "director": "Frank Darabont", "genre": "Drama", "rating": 8.6, "poster": "path/to/poster.jpg" },
-    { "id": 18, "title": "Avatar", "director": "James Cameron", "genre": "Sci-Fi", "rating": 7.8, "poster": "path/to/poster.jpg" },
-    { "id": 19, "title": "Titanic", "director": "James Cameron", "genre": "Romance", "rating": 7.9, "poster": "path/to/poster.jpg" },
-    { "id": 20, "title": "Joker", "director": "Todd Phillips", "genre": "Crime", "rating": 8.4, "poster": "path/to/poster.jpg" }
-  ]
+  {
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "rating": 8.8,
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "image": "https://via.placeholder.com/150x200?text=Inception"
+  },
+  {
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "rating": 9.0,
+    "director": "Christopher Nolan",
+    "year": 2008,
+    "image": "https://via.placeholder.com/150x200?text=The+Dark+Knight"
+  },
+  {
+    "title": "Interstellar",
+    "genre": "Sci-Fi",
+    "rating": 8.6,
+    "director": "Christopher Nolan",
+    "year": 2014,
+    "image": "https://via.placeholder.com/150x200?text=Interstellar"
+  },
+  {
+    "title": "The Godfather",
+    "genre": "Drama",
+    "rating": 9.2,
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "image": "https://via.placeholder.com/150x200?text=The+Godfather"
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "rating": 9.3,
+    "director": "Frank Darabont",
+    "year": 1994,
+    "image": "https://via.placeholder.com/150x200?text=Shawshank"
+  },
+  {
+    "title": "Pulp Fiction",
+    "genre": "Crime",
+    "rating": 8.9,
+    "director": "Quentin Tarantino",
+    "year": 1994,
+    "image": "https://via.placeholder.com/150x200?text=Pulp+Fiction"
+  },
+  {
+    "title": "Fight Club",
+    "genre": "Drama",
+    "rating": 8.8,
+    "director": "David Fincher",
+    "year": 1999,
+    "image": "https://via.placeholder.com/150x200?text=Fight+Club"
+  },
+  {
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "rating": 8.8,
+    "director": "Robert Zemeckis",
+    "year": 1994,
+    "image": "https://via.placeholder.com/150x200?text=Forrest+Gump"
+  },
+  {
+    "title": "The Matrix",
+    "genre": "Sci-Fi",
+    "rating": 8.7,
+    "director": "The Wachowskis",
+    "year": 1999,
+    "image": "https://via.placeholder.com/150x200?text=The+Matrix"
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "genre": "Fantasy",
+    "rating": 8.8,
+    "director": "Peter Jackson",
+    "year": 2001,
+    "image": "https://via.placeholder.com/150x200?text=LOTR+Fellowship"
+  },
+  {
+    "title": "The Lord of the Rings: The Two Towers",
+    "genre": "Fantasy",
+    "rating": 8.7,
+    "director": "Peter Jackson",
+    "year": 2002,
+    "image": "https://via.placeholder.com/150x200?text=LOTR+Towers"
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "genre": "Fantasy",
+    "rating": 9.0,
+    "director": "Peter Jackson",
+    "year": 2003,
+    "image": "https://via.placeholder.com/150x200?text=LOTR+Return"
+  },
+  {
+    "title": "The Avengers",
+    "genre": "Action",
+    "rating": 8.0,
+    "director": "Joss Whedon",
+    "year": 2012,
+    "image": "https://via.placeholder.com/150x200?text=The+Avengers"
+  },
+  {
+    "title": "Titanic",
+    "genre": "Romance",
+    "rating": 7.8,
+    "director": "James Cameron",
+    "year": 1997,
+    "image": "https://via.placeholder.com/150x200?text=Titanic"
+  },
+  {
+    "title": "Avatar",
+    "genre": "Sci-Fi",
+    "rating": 7.8,
+    "director": "James Cameron",
+    "year": 2009,
+    "image": "https://via.placeholder.com/150x200?text=Avatar"
+  },
+  {
+    "title": "Gladiator",
+    "genre": "Action",
+    "rating": 8.5,
+    "director": "Ridley Scott",
+    "year": 2000,
+    "image": "https://via.placeholder.com/150x200?text=Gladiator"
+  },
+  {
+    "title": "The Lion King",
+    "genre": "Animation",
+    "rating": 8.5,
+    "director": "Roger Allers, Rob Minkoff",
+    "year": 1994,
+    "image": "https://via.placeholder.com/150x200?text=The+Lion+King"
+  },
+  {
+    "title": "Star Wars: Episode IV - A New Hope",
+    "genre": "Sci-Fi",
+    "rating": 8.6,
+    "director": "George Lucas",
+    "year": 1977,
+    "image": "https://via.placeholder.com/150x200?text=Star+Wars"
+  },
+  {
+    "title": "Schindler's List",
+    "genre": "Drama",
+    "rating": 9.0,
+    "director": "Steven Spielberg",
+    "year": 1993,
+    "image": "https://via.placeholder.com/150x200?text=Schindlers+List"
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "genre": "Thriller",
+    "rating": 8.6,
+    "director": "Jonathan Demme",
+    "year": 1991,
+    "image": "https://via.placeholder.com/150x200?text=Silence+of+Lambs"
+  },
+  {
+    "title": "The Prestige",
+    "genre": "Drama",
+    "rating": 8.5,
+    "director": "Christopher Nolan",
+    "year": 2006,
+    "image": "https://via.placeholder.com/150x200?text=The+Prestige"
+  },
+  {
+    "title": "The Departed",
+    "genre": "Crime",
+    "rating": 8.5,
+    "director": "Martin Scorsese",
+    "year": 2006,
+    "image": "https://via.placeholder.com/150x200?text=The+Departed"
+  },
+  {
+    "title": "Django Unchained",
+    "genre": "Drama",
+    "rating": 8.4,
+    "director": "Quentin Tarantino",
+    "year": 2012,
+    "image": "https://via.placeholder.com/150x200?text=Django+Unchained"
+  },
+  {
+    "title": "Braveheart",
+    "genre": "Drama",
+    "rating": 8.4,
+    "director": "Mel Gibson",
+    "year": 1995,
+    "image": "https://via.placeholder.com/150x200?text=Braveheart"
+  },
+  {
+    "title": "Whiplash",
+    "genre": "Drama",
+    "rating": 8.5,
+    "director": "Damien Chazelle",
+    "year": 2014,
+    "image": "https://via.placeholder.com/150x200?text=Whiplash"
+  }
+]
