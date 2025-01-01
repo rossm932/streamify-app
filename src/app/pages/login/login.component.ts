@@ -40,7 +40,7 @@ export class LoginComponent {
     if (this.username === 'abc' && this.password === 'abc123') {
       this.loginValid = true; // Credentials are correct
       this.authService.login(); // Update login state
-      this.router.navigate(['/home']); // Redirect to home
+      this.router.navigate(['/browse']); // Redirect to home
     } else {
       this.loginValid = false; // Invalid credentials
     }
