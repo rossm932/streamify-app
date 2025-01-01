@@ -1,0 +1,44 @@
+<div class="page-container">
+  <h1>Streamify</h1>
+
+  <div class="filter-section">
+    <!-- Search Input -->
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Search by title"
+      (input)="onSearch()"
+    />
+
+    <!-- Genre Filter -->
+    <select [(ngModel)]="filterGenre" (change)="onSearch()">
+      <option value="">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+    </select>
+
+    <!-- Rating Filter -->
+    <input
+      type="number"
+      [(ngModel)]="filterRating"
+      placeholder="Minimum Rating"
+      (input)="onSearch()"
+    />
+
+    <!-- Reset Button -->
+    <button (click)="clearFilters()">Clear Filters</button>
+  </div>
+
+  <!-- Movie List -->
+  <div class="movie-list">
+    <div *ngFor="let movie of filteredMovies" class="movie-item">
+      <img [src]="movie.image" alt="{{ movie.title }}" class="movie-poster" />
+      <h3>{{ movie.title }}</h3>
+      <p>Genre: {{ movie.genre }}</p>
+      <p>Rating: {{ movie.rating }}</p>
+      <p>Director: {{ movie.director }}</p>
+      <p>Year: {{ movie.year }}</p>
+    </div>
+  </div>
+</div>
